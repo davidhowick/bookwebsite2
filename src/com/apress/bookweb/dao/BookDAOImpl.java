@@ -34,7 +34,7 @@ public class BookDAOImpl implements BookDAO {
 		//return  DriverManager.getConnection("jdbc:mysql://localhost:3306/books",
 		//"root", "root");
 		
-		return DriverManager.getConnection("jdbc:mysql://mydatabase2.cy9lg9m9ydxy.us-west-2.rds.amazonaws.com:3306/books", "mydatebase", "Wolfie37");
+		return DriverManager.getConnection("jdbc:mysql://mydatabase2.cy9lg9m9ydxy.us-west-2.rds.amazonaws.com:3306/books", "****", "****");
 	}
 	//jdbc:driver://hostname:port/dbName?user=userName&password=password
 	private void closeConnection(Connection connection){

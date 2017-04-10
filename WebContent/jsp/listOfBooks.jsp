@@ -3,6 +3,7 @@
     <%@ page import="java.util.List" %>
     <%@ page import="com.apress.bookweb.model.Book" %>
     <%@ page import="java.util.Iterator" %>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,7 +30,7 @@
       </tr>
     </thead>
   
-<%
+ <%
 List<Book> categoryList1 = (List<Book>) request.getAttribute("bookList");
 Iterator<Book> iterator1 = categoryList1.iterator();
 while(iterator1.hasNext()){

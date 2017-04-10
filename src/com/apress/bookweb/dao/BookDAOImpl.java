@@ -13,7 +13,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,10 +31,12 @@ public class BookDAOImpl implements BookDAO {
 	
 	private Connection getConnection() throws SQLException{
 		System.out.println("you are in the getConnection() method");
-		return DriverManager.getConnection("jdbc:mysql://localhost:3306/books",
-				"root", "root");	
+		//return  DriverManager.getConnection("jdbc:mysql://localhost:3306/books",
+		//"root", "root");
+		
+		return DriverManager.getConnection("jdbc:mysql://mydatabase2.cy9lg9m9ydxy.us-west-2.rds.amazonaws.com:3306/books", "mydatebase", "Wolfie37");
 	}
-	
+	//jdbc:driver://hostname:port/dbName?user=userName&password=password
 	private void closeConnection(Connection connection){
 		if(connection == null)
 			return;

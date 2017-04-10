@@ -32,9 +32,7 @@ public class BookController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
@@ -43,14 +41,14 @@ public class BookController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("you are here");
+		System.out.println("the request is: " + request);
 		String base = "/jsp/";
 		String url = base + "home.jsp";
 		String action = request.getParameter("action");
 		String category = request.getParameter("category");
 		String keyWord = request.getParameter("keyWord");
 		System.out.println(action + " caught variable");
-		if(action != null){
+		if(action != null){ 
 			switch (action){
 			case "allBooks":
 				System.out.println("you are here 2");
